@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TicketiFy - Book Smart. Enter Fast.</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+  <header>
+    <h1>🎟️ TicketiFy</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/book">Book Ticket</a>
+      <a href="/history">History</a>
+      {% if session['user'] %}
+        <a href="/logout">Logout</a>
+      {% else %}
+        <a href="/login">Login</a>
+      {% endif %}
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <p>© 2025 TicketiFy | Developed by NABP</p>
+  </footer>
+</body>
+</html>

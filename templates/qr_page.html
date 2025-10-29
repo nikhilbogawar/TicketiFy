@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="qr-container">
+  <h2>Your Ticket is Confirmed!</h2>
+  <p>Event: {{ event }} | Tickets: {{ tickets }}</p>
+  <img src="{{ url_for('static', filename=qr_path) }}" alt="QR Code" width="250">
+  <p>Show this QR code at the event gate for entry.</p>
+</div>
+{% endblock %}

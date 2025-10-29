@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="history-container">
+  <h2>Your Booking History 📜</h2>
+  <table>
+    <tr><th>Event</th><th>Tickets</th><th>Date</th><th>QR</th></tr>
+    {% for b in bookings %}
+    <tr>
+      <td>{{ b[2] }}</td>
+      <td>{{ b[3] }}</td>
+      <td>{{ b[4] }}</td>
+      <td><img src="{{ url_for('static', filename=b[5]) }}" width="80"></td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}

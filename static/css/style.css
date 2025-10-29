@@ -1,0 +1,226 @@
+/* ------------------------------
+   Global Layout & Body
+--------------------------------*/
+body {
+  background: linear-gradient(135deg, #ff6b6b, #fddb92);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.5s ease;
+}
+
+/* ------------------------------
+   Header & Navigation
+--------------------------------*/
+header {
+  background: linear-gradient(90deg, #ff3b3b, #ff8a00);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background: rgba(255,255,255,0.2);
+  transform: scale(1.1);
+}
+
+/* ------------------------------
+   Footer
+--------------------------------*/
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+/* ------------------------------
+   Buttons & Links
+--------------------------------*/
+button, .btn {
+  background: linear-gradient(45deg, #ff6b6b, #ff8a00);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background: linear-gradient(45deg, #ff8a00, #ff6b6b);
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+a.btn {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+/* ------------------------------
+   Form Containers
+--------------------------------*/
+.form-container, .home, .qr-container, .history-container {
+  background: white;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 700px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  animation: fadeInUp 0.8s ease;
+}
+
+.form-container h2,
+.home h2,
+.qr-container h2,
+.history-container h2 {
+  text-align: center;
+  color: #ff3b3b;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+form input, form select {
+  width: 95%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #ff8a00;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+form input:focus, form select:focus {
+  border-color: #ff3b3b;
+  box-shadow: 0 0 6px rgba(255,59,59,0.4);
+}
+
+/* ------------------------------
+   QR Display
+--------------------------------*/
+.qr-container img {
+  display: block;
+  margin: 1.5rem auto;
+  border: 4px solid #ff8a00;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.qr-container img:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+/* ------------------------------
+   Booking History Table
+--------------------------------*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+table th {
+  background: linear-gradient(45deg, #ff6b6b, #ff8a00);
+  color: #fff;
+  padding: 12px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+table td {
+  padding: 12px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+table tr:hover td {
+  background: #fff4e6;
+  transition: background 0.3s ease;
+}
+
+table img {
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+table img:hover {
+  transform: scale(1.2);
+}
+
+/* ------------------------------
+   Flash messages (optional)
+--------------------------------*/
+.flash {
+  background: #ffeb3b;
+  color: #333;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* ------------------------------
+   Animation Keyframes
+--------------------------------*/
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ------------------------------
+   Responsive Design
+--------------------------------*/
+@media screen and (max-width: 768px) {
+  .form-container, .home, .qr-container, .history-container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+  nav a {
+    display: inline-block;
+    margin: 6px;
+  }
+  button, .btn {
+    width: 100%;
+  }
+}

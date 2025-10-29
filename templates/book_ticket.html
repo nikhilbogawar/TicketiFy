@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="form-container">
+  <h2>Book Your Ticket 🎫</h2>
+  <form method="POST">
+    <label>Event Name:</label>
+    <select name="event_name" required>
+      <option value="Music Concert">Music Concert</option>
+      <option value="Tech Conference">Tech Conference</option>
+      <option value="Comedy Show">Comedy Show</option>
+      <option value="Movie Premiere">Movie Premiere</option>
+      <option value="Sports Event">Sports Event</option>
+    </select><br>
+
+    <label>No. of Tickets:</label>
+    <input type="number" name="num_tickets" min="1" max="10" required><br>
+
+    <button type="submit">Generate QR Ticket</button>
+  </form>
+</div>
+{% endblock %}
